@@ -1,0 +1,28 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	char s[t];
+	int a[26]={0};
+	cin>>s;
+	for(int i=0;s[i]!='\0';i++)
+	{
+	    int x=s[i]-97;
+	    a[x]=a[x]+1;
+	}
+    int sum=0;
+	for(int j=0;j<26;j++)
+	{  
+	    if(a[j]!=0)
+	    {
+	    if(sum<=a[j])
+	     sum=a[j];
+	    }
+	}
+	cout<<sum;
+}
